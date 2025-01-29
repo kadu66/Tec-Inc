@@ -1,0 +1,244 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Fundo mais suave */
+    color: #0E4686;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #0E4686; /* Verde suave para o limite inferior */
+    transition: background-color 0.3s ease;
+}
+
+/* Contêiner de logo */
+header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Logo alinhada à esquerda */
+}
+
+/* Logo */
+header .logo-container img {
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito no passar o mouse sobre a logo */
+header .logo-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Links do menu */
+nav a {
+    text-decoration: none;
+    color: #0E4686;
+    font-weight: 600;
+    font-size: 1.1rem; /* Tamanho de fonte ajustado */
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
+
+/* Efeito de hover nos links */
+nav a:hover {
+    color: #0E4686;
+    transform: scale(1.05); /* Leve aumento do tamanho */
+}
+
+/* Seção Hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #DEDEDE; /* Verde suave de fundo */
+    margin: 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.hero .text-content {
+    max-width: 50%;
+    padding-right: 30px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #0E4686;
+}
+
+.hero h1 .highlight {
+    color: #0E4686;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero button {
+    padding: 12px 25px;
+    background-color: #0E4686;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero button:hover {
+    background-color: #;
+    transform: scale(1.05);
+}
+
+.hero .hero-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover; /* Ajuste adequado da imagem */
+    margin-top: 20px;
+}
+
+/* Seção Sobre */
+.about {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Seção CTA */
+.cta {
+    background-color: #0E4686;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta button {
+    padding: 12px 30px;
+    background-color: #0351C6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px; /* Menos espaçamento nas telas menores */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center; /* Menu centralizado */
+    }
+
+    nav a {
+        font-size: 1rem; /* Fontes menores em dispositivos móveis */
+    }
+
+    .logo-container {
+        margin-bottom: 20px; /* Espaço entre logo e menu em telas menores */
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .text-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero .hero-image img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
